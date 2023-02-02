@@ -1,0 +1,37 @@
+Request method:	POST
+Request URI:	https://prod.api.tutorbin.com/v1/orders
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		user-role=student
+				Authorization= Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2MzJlOGYyOWQyNWRlNjJiYmI5ZWFjZGUiLCJpYXQiOjE2NzIwNzMwMTgsImV4cCI6MTY3MjE1OTQxOCwidHlwZSI6ImFjY2VzcyIsInVzZXJSb2xlIjoic3R1ZGVudCJ9.mt8eXw9cIKuHl9t1Jo7_Lr6lIFrQ3jHq0IFkcpVUE3c
+				Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "description": "testing",
+    "type": "assignment"
+}
+HTTP/1.1 401 Unauthorized
+Date: Thu, 29 Dec 2022 06:32:50 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 95
+Connection: keep-alive
+X-Powered-By: Express
+Content-Security-Policy: img-src 'self' https: data:;default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests
+Access-Control-Allow-Origin: *
+ETag: W/"5f-S67b2ge7VAoPv8c6Y+X8SVphSk8"
+Vary: Accept-Encoding
+
+{
+    "success": false,
+    "code": 401,
+    "reason": "Unauthorized",
+    "errors": {
+        "message": "Please authenticate"
+    }
+}

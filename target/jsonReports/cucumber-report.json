@@ -1,0 +1,108 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2022-12-29T06:32:46.730Z",
+        "line": 10,
+        "name": "verify if user login is able to create order with description",
+        "description": "",
+        "id": "validating-orders-api;verify-if-user-login-is-able-to-create-order-with-description;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 1011000000,
+              "status": "passed"
+            },
+            "line": 3,
+            "name": "Add Orders payload with \"testing\" and \"assignment\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"testing\"",
+                  "offset": 24
+                },
+                {
+                  "val": "\"assignment\"",
+                  "offset": 38
+                }
+              ],
+              "location": "ordersCreated.orderCreation.add_Orders_payload_with_and(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1451000000,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "user calls \"orderTypeAPI\" with \"POST\" http request",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"orderTypeAPI\"",
+                  "offset": 11
+                },
+                {
+                  "val": "\"POST\"",
+                  "offset": 31
+                }
+              ],
+              "location": "ordersCreated.orderCreation.user_calls_with_http_request(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "error_message": "java.lang.AssertionError: expected:\u003c401\u003e but was:\u003c201\u003e\r\n\tat org.junit.Assert.fail(Assert.java:88)\r\n\tat org.junit.Assert.failNotEquals(Assert.java:743)\r\n\tat org.junit.Assert.assertEquals(Assert.java:118)\r\n\tat org.junit.Assert.assertEquals(Assert.java:555)\r\n\tat org.junit.Assert.assertEquals(Assert.java:542)\r\n\tat ordersCreated.orderCreation.the_API_call_got_success_with_status_code(orderCreation.java:63)\r\n\tat ✽.the API call got success with status code 201(file:///C:/Users/Tutorbin/eclipse-workspace/APITutorbin/src/test/java/features/Orders.feature:5)\r\n",
+              "duration": 2000000,
+              "status": "failed"
+            },
+            "line": 5,
+            "name": "the API call got success with status code 201",
+            "match": {
+              "arguments": [
+                {
+                  "val": "201",
+                  "offset": 42
+                }
+              ],
+              "location": "ordersCreated.orderCreation.the_API_call_got_success_with_status_code(java.lang.Integer)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 6,
+            "name": "\"status\" in response body is \"OK\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"status\"",
+                  "offset": 0
+                },
+                {
+                  "val": "\"OK\"",
+                  "offset": 29
+                }
+              ],
+              "location": "ordersCreated.orderCreation.in_response_body_is(java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      }
+    ],
+    "name": "Validating Orders API",
+    "description": "",
+    "id": "validating-orders-api",
+    "keyword": "Feature",
+    "uri": "file:src/test/java/features/Orders.feature",
+    "tags": []
+  }
+]
